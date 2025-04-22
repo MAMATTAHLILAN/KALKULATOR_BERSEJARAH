@@ -1,4 +1,5 @@
-body {
+/* basic design for the calculator and aligning it in center */
+body{
     padding: 0;
     margin: 0;
     display: flex;
@@ -6,24 +7,23 @@ body {
     align-items: center;
     min-height: 100vh;
     user-select: none;
+
+buat css ini menjadi responsive
+
+
     background: #ecf0f3;
-    font-family: sans-serif;
-    flex-direction: column;
 }
 
-/* Outer calculator container */
-.container {
+/* designing the outer structure of calculator */
+.container{   
+    margin-left: 1.8em;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 13px 13px 20px #cbced1,
-                -13px -13px 20px #ffffff;
-    max-width: 90vw;
-    width: 360px;
-    box-sizing: border-box;
+                -13px -13px 20px #ffffff; 
 }
 
-/* Content inside calculator */
-.content {
+.content{
     width: 100%;
     margin-top: 1.7em;
     display: flex;
@@ -31,17 +31,11 @@ body {
     align-items: center;
     flex-direction: column;
 }
-
-/* Buttons */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.row button {
+ 
+/* designing buttons */
+.row button{
     width: 60px;
-    height: 40px;
+    height: 30px;
     font-size: 16px;
     border: none;
     outline: none;
@@ -51,18 +45,18 @@ body {
     box-shadow: 5px 5px 8px #00000020,
                 -5px -5px 8px #ffff;
 }
-
-.row button:hover {
+/* styling buttons when mouse is moved over them */
+.row button:hover{
     cursor: pointer;
     box-shadow: inset 5px 5px 8px rgba(16, 16, 16, .1),
                 inset -5px -5px 8px #fff;
     background: #fff;
 }
 
-/* Display screen */
-.display #screen {
+/* designing the display screen */
+.display #screen{
     margin-bottom: .5em;
-    width: 100%;
+    width: auto;
     height: 70px;
     font-size: 35px;
     outline: none;
@@ -73,49 +67,47 @@ body {
     border-radius: 6px;
     box-shadow: inset 8px 8px 8px #cbced1,
                 inset -8px -8px 8px #ffffff;
-    box-sizing: border-box;
 }
 
-/* Equals to button */
-#eval {
+/* designing "equals to" button */
+#eval{
     background: #33ccff;
     color: #fff;
     box-shadow: inset 5px 5px 8px #66d9ff,
                 inset -5px -5px 8px #00ace6;
 }
 
-#eval:hover {
+#eval:hover{
     box-shadow: inset 5px 5px 8px #00ace6,
                 inset -5px -5px 8px #00ace6;
 }
 
-/* All clear button */
-#ac {
+/* designing "all clear" button */
+#ac{
     background: #33cc33;
     color: #fff;
 }
 
-#ac:hover {
+#ac:hover{
     box-shadow: inset 5px 5px 8px #2eb82e,
                 inset -5px -5px 8px #33cc33;
 }
 
-/* Clear button */
-#ce {
+/* designing "clear" button */
+#ce{
     background: #ff3399;
     color: #fff;
 }
 
-#ce:hover {
+#ce:hover{
     box-shadow: inset 5px 5px 8px #e60073,
                 inset -5px -5px 8px #ff3399;
 }
 
-/* History box */
-#history {
-    margin-top: 2em;
-    width: 90vw;
-    max-width: 360px;
+/* designing History box */
+#history{
+    margin-left: 1.8em;
+    width: 340px;
     height: 335px;
     border-radius: 8px;
     overflow-y: scroll;
@@ -127,51 +119,22 @@ body {
     padding: 10px 20px;
 }
 
-#history:hover {
+#history:hover{
     box-shadow: inset 5px 5px 8px #00ace6,
                 inset -5px -5px 8px #00ace6;
 }
-
-/* Scrollbar */
-#history::-webkit-scrollbar {
+/* creating srollbar for History box */
+#history::-webkit-scrollbar{
     width: 1;
 }
-
-/* History title */
-#history h1 {
-    padding: 0;
+/* designing history box data */
+#history h1{
+    padding: 0px 0px;
     font-size: 1.8em;
 }
-
-/* Last entry highlight */
-#history p:last-child {
+/* designing last appended data in History box */
+#history p:last-child{
     font-size: 1.4em;
     font-weight: 500;
     color: #eee;
-}
-
-/* ===== Responsive tweaks ===== */
-@media screen and (max-width: 400px) {
-    .row button {
-        width: 50px;
-        height: 40px;
-        font-size: 14px;
-    }
-
-    .display #screen {
-        font-size: 28px;
-    }
-
-    #history {
-        font-size: 1em;
-        height: 250px;
-    }
-
-    #history h1 {
-        font-size: 1.4em;
-    }
-
-    #history p:last-child {
-        font-size: 1.2em;
-    }
 }
